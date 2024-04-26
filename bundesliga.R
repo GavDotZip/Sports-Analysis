@@ -36,4 +36,4 @@ plotTopMVs <- ggplot(top10MV, aes(x = reorder(paste(name), MaxValue), y = MaxVal
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 # Save the plot
-ggsave(filename = "plots/bundesliga/topGoalScorers.png", plot = plotTopMVs, width = 10, height = 6)
+ggsave(filename = "plots/bundesliga/topMarketValue.png", plot = plotTopMVs, width = 10, height = 6)
