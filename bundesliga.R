@@ -8,3 +8,7 @@ bliga <- read.csv("C:/Users/gavin/RProjects/Sports-Analysis/datasets/bundesliga_
 
 # View the structure of the dataframe
 str(bliga)
+
+# Display summary of data
+cat("\nSummary of Data:\n")
+print(summary(bliga))
