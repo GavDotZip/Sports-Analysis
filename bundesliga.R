@@ -27,3 +27,13 @@ top10MV <- max_marketVal %>%
 # Print the Top 10 Most Expensive Players
 cat("\nTop 10 Players by Market value (Millions):\n")
 print(top10MV)
+
+library(ggplot2)
+# Create a bar chart for the top 10 players by total goals
+plotTopMVs <- ggplot(top10MV, aes(x = reorder(paste(name), MaxValue), y = MaxValue)) +
+  geom_bar(stat = "identity", fill = "orange") +
+  labs(title = "Top 10 Most Expensive Players", x = "Player", y = "Max. Market Value (Millions)") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Save the plot
+ggsave(filename = "plots/bundesliga/topGoalScorers.png", plot = plotTopMVs, width = 10, height = 6)
